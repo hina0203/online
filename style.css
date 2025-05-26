@@ -1,19 +1,164 @@
-/* 既存コードはそのまま */
+/* 全体レイアウト */
+body {
+  background-color: #0a0a17; /* 濃いネイビー/ほぼ黒 */
+  color: #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-/* 追加部分 */
+.lp-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ヒーローセクション */
+.hero {
+  text-align: center;
+  padding: 60px 20px 80px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d4af37; /* ゴールド */
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.8);
+}
+
+.sub-catch {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f0e6b6; /* 明るいゴールド寄り */
+  margin-bottom: 20px;
+  text-shadow: 0 0 4px rgba(255, 255, 200, 0.6);
+}
+
 .hero-description {
-  margin-top: 20px;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #ddd;
-  max-width: 400px;
+  color: #ccc;
+  max-width: 420px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
+}
+
+/* ボタン共通スタイル */
+.cta-button,
+.submit-button {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 0; /* 角あり */
+  border: none;
+  color: #1a1a23; /* 文字は濃いネイビー */
+  background: linear-gradient(135deg, #d4af37 0%, #f7e163 50%, #b89522 100%);
+  box-shadow:
+    0 2px 4px rgba(212, 175, 55, 0.8),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.3);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  user-select: none;
+}
+
+.cta-button:hover,
+.cta-button:focus,
+.submit-button:hover,
+.submit-button:focus {
+  background: linear-gradient(135deg, #f7e163 0%, #d4af37 50%, #b89522 100%);
+  box-shadow:
+    0 4px 12px rgba(212, 175, 55, 1),
+    inset 0 -3px 7px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+/* 問い合わせフォームセクション */
+.contact-form-section {
+  background-color: #12121d;
+  padding: 40px 20px 60px;
+  margin-top: 60px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.9);
+  text-align: center;
 }
 
 .form-intro {
   font-size: 0.95rem;
   color: #ccc;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   line-height: 1.5;
+  text-align: center;
+}
+
+/* フォームラベル */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #eee;
+}
+
+/* フォーム入力フィールド */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 2px solid #555862;
+  border-radius: 4px;
+  background-color: #1f1f2b;
+  color: #eee;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #d4af37;
+  outline: none;
+  background-color: #292939;
+}
+
+/* 送信完了・エラーメッセージ */
+.form-message {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  min-height: 1.3em;
+  user-select: none;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .sub-catch {
+    font-size: 1.1rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+  .cta-button,
+  .submit-button {
+    font-size: 1.1rem;
+    padding: 12px 28px;
+  }
+  .contact-form-section {
+    padding: 30px 15px 40px;
+  }
 }
