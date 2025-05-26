@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>30分無料オンライン相談LP</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="lp-container" role="main" aria-label="30分無料オンライン相談申し込み">
+    <section class="hero">
+      <h1>30分の無料オンライン相談</h1>
+      <p class="sub-catch">あなたの課題を専門家が親身にサポートします。</p>
+      <p class="hero-description">
+        初めての方も安心。オンラインで気軽に相談いただけます。<br />
+        30分間でお悩みやご質問をお伺いし、最適な解決策をご提案いたします。<br />
+        ご予約は簡単、今すぐ以下のボタンからお申し込みください。
+      </p>
+      <button id="scrollToForm" class="cta-button" type="button" aria-label="お問い合わせフォームへスクロール">今すぐ申し込む</button>
+    </section>
+
+    <section id="contactFormSection" class="contact-form-section" aria-label="問い合わせフォーム">
+      <h2>お問い合わせフォーム</h2>
+      <p class="form-intro">
+        以下のフォームに必要事項をご入力の上、送信してください。<br />
+        ご入力いただいた情報は厳重に管理し、他の目的には使用いたしません。
+      </p>
+      <form id="contactForm" novalidate>
+        <label for="name">お名前<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="例：山田 太郎" />
+
+        <label for="email">メールアドレス<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="example@mail.com" />
+
+        <label for="message">ご相談内容・ご質問<span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="ご相談内容をできるだけ詳しくご記入ください"></textarea>
+
+        <button type="submit" class="submit-button">送信する</button>
+      </form>
+      <p id="formMessage" role="alert" aria-live="polite" class="form-message"></p>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

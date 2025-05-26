@@ -1,0 +1,19 @@
+/* 既存コードはそのまま */
+
+/* 追加部分 */
+.hero-description {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-intro {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
